@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:text_gradient/code.dart';
+import 'package:text_gradient/loading_indicators.dart';
+import 'package:text_gradient/animated_cross_over.dart';
 import 'package:text_gradient/gradient-customizer.dart';
 
 void main() {
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.dark(
         useMaterial3: true,
       ),
-      home: GradientCustomizer(),
+      home: const LoadingIndicatorsShowcase(),
     );
   }
 }
