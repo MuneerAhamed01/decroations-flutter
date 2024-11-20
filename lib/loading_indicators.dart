@@ -37,12 +37,20 @@ class _LoadingIndicatorsShowcaseState extends State<LoadingIndicatorsShowcase>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 29, 29, 29),
       appBar: AppBar(
-        title: const Text("Loading Indicaors"),
+        centerTitle: false,
+        backgroundColor: const Color.fromARGB(255, 29, 29, 29),
+        title: const Text(
+          "Loading Indicaors",
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ),
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.all(16),
+          padding: EdgeInsets.all(16).copyWith(top: 0),
           child: SingleChildScrollView(
             child: Wrap(
               runSpacing: 30,
@@ -699,20 +707,22 @@ class _LoadingIndicatorsShowcaseState extends State<LoadingIndicatorsShowcase>
   }
 
   Widget _buildIndicator(Widget indicator, String title) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        SizedBox(
-          height: 50,
-          width: 50,
-          child: Center(child: indicator),
-        ),
-        const SizedBox(height: 8),
-        Text(
-          title,
-          style: const TextStyle(fontSize: 12),
-        ),
-      ],
+    return Container(
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          SizedBox(
+            height: 50,
+            width: 50,
+            child: Center(child: indicator),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            title,
+            style: const TextStyle(fontSize: 12),
+          ),
+        ],
+      ),
     );
   }
 }
