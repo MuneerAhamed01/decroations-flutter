@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:text_gradient/code.dart';
+import 'package:text_gradient/flow_widget_eg.dart';
 import 'package:text_gradient/loading_indicators.dart';
 import 'package:text_gradient/animated_cross_over.dart';
 import 'package:text_gradient/gradient-customizer.dart';
@@ -19,10 +20,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark(
+      theme: ThemeData(
         useMaterial3: true,
       ),
-      home: const LoadingIndicatorsShowcase(),
+      home: const FlowWidget(),
     );
   }
 }
